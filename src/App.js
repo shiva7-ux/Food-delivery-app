@@ -11,11 +11,13 @@ import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./constant/appStore";
 import Cart from "./components/Cart";
+import SignUpPage from "./components/signup";
+
 // import Grocery from "./components/Grocery";
 
 //chunking
 //lazy loading
-const Grocery = lazy(()=> import("./components/Grocery"));
+const SIGNIN = lazy(()=> import("./components/signin"));
 
  
 
@@ -53,13 +55,18 @@ const appRouter = createBrowserRouter([
             },
             { 
                  path:"/sign in",
-                 element:<Suspense fallback={<h1>Loading......</h1>}><Grocery/></Suspense>,
+                 element:<Suspense fallback={<h1>Loading......</h1>}><SIGNIN/></Suspense>,
             },
             
             {
                 path:"/restaurants/:resId",
                 element:<RestaurantMenu/>,
             },
+            {
+              path:"/signup",
+              element: <SignUpPage/>,
+            },
+            
         ],
         errorElement:<Error/>,
     },

@@ -1,12 +1,19 @@
-const LoginPage = () => {
+import SignUpPage from "./signup";
+
+const LoginPage = ({ toggleLogin }) => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
           {/* Header */}
           <h1 className="text-2xl font-bold text-gray-800 text-center mb-6">Login to Your Account</h1>
-          
+  
           {/* Login Form */}
-          <form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              toggleLogin(); // Simulate login on form submission
+            }}
+          >
             {/* Email Input */}
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-semibold mb-2" htmlFor="email">
@@ -49,7 +56,7 @@ const LoginPage = () => {
           {/* Footer */}
           <p className="text-sm text-center text-gray-600">
             Don't have an account?{" "}
-            <a href="/signup" className="text-green-500 font-semibold hover:underline">
+            <a href="/signup"  className="text-green-500 font-semibold hover:underline">
               Sign Up
             </a>
           </p>
@@ -59,18 +66,4 @@ const LoginPage = () => {
   };
   
   export default LoginPage;
-
-
-
-
-
-
-
-
-
-
-
-
-  //other form
-  
   

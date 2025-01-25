@@ -29,23 +29,13 @@
 
 
 // export default About;
-
-
-
-
-
-
-
-
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gray-200 flex flex-col items-center">
-     
       <div className="w-full bg-green-500 h-12 flex items-center justify-center">
         <p className="text-white text-sm font-semibold">Welcome to FoodieExpress!</p>
       </div>
 
-     
       <div className="px-6 py-12 w-full max-w-4xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">About Us</h1>
@@ -54,7 +44,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        
         <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
           <p className="text-gray-600">
@@ -62,8 +51,6 @@ const AboutUs = () => {
             We partner with local restaurants to ensure a variety of cuisines and fresh ingredients to satisfy every craving.
           </p>
         </div>
-
-       
         <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">What We Offer</h2>
           <ul className="list-disc list-inside text-gray-600">
@@ -75,7 +62,6 @@ const AboutUs = () => {
           </ul>
         </div>
 
-       
         <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Values</h2>
           <p className="text-gray-600">
@@ -84,7 +70,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-      
         <div className="text-center mt-8">
           <p className="text-lg text-gray-700 mb-4">
             Ready to explore delicious meals? Download our app now and enjoy seamless food delivery!
@@ -95,9 +80,7 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default AboutUs;
-
-
+      );
+    };
+    
+    export default AboutUs;
