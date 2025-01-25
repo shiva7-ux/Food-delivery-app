@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../constant/useOnlineStatus";
 // import UserContext from "../constant/UserContext";
 import { useSelector } from "react-redux";
+import LoginPage from "./login";
 const Header=()=>{
    const [BtnName,setBtnName]= useState("LOGIN");
 
@@ -16,9 +17,9 @@ const Header=()=>{
    const cartItems = useSelector((store) => store.cart.items);
 
     return(
-       <div className="flex justify-between  bg-green-200 shadow-md z-50  h-20  fixed mx-0 my-0 w-full">
+       <div className="flex justify-between  bg-white shadow-md z-50  h-20  fixed mx-0 my-0 w-full">
           <div className="logo-container">
-             <img className="w-20 h-20" src={LOGO_URL}></img>
+             <img className="w-20 h-20" alt="img2" src={LOGO_URL} ></img>
           </div>
          <div className="flex items-center">
            <ul className="flex m-4 p-4">
@@ -34,13 +35,16 @@ const Header=()=>{
              <li className="px-4">
                <Link to="/contact">Contact Us</Link>
                </li>
-               <li className="px-4">
+               {/* <li className="px-4">
                <Link to="/grocery">Grocery</Link>
-               </li>
+               </li> */}
 
              <li className="px-4 cursor-pointer font-bold"><Link to="/cart">Cart({cartItems.length} items)</Link>
              
              </li>
+             {/* <li className="px-4 ">
+               <Link to="/Sign in">Sign in</Link>
+               </li> */}
              <button className="LOGIN  border border-green-300 px-3 py-1  hover:bg-white hover:text-red-500 "
                onClick={()=>{
                   BtnName === "LOGIN"
@@ -51,6 +55,7 @@ const Header=()=>{
                {BtnName}</button>
                {/* <li className="px-4 font-bold">{loggedInUser}</li> */}
            </ul>
+          
        </div>
        </div>
     );

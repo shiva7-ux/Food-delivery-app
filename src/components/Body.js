@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../constant/useOnlineStatus";
+// import Footer from "./footer";
 
 const Body = () => {
 
@@ -105,6 +106,7 @@ const Body = () => {
              </Link>
             ))}
          </div> 
+       
      </div>
     );
  };

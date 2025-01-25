@@ -52,9 +52,10 @@ const appRouter = createBrowserRouter([
                  element:<Cart/>,
             },
             { 
-                 path:"/grocery",
+                 path:"/sign in",
                  element:<Suspense fallback={<h1>Loading......</h1>}><Grocery/></Suspense>,
             },
+            
             {
                 path:"/restaurants/:resId",
                 element:<RestaurantMenu/>,

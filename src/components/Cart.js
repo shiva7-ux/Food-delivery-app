@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { clearCart } from "../constant/cartSlice";
 import ItemList from "./ItemList";
 import { useDispatch } from "react-redux";
+// import FoodCart from "./removenbtn";
 const Cart = () => {
      const cartItems = useSelector((store) => store.cart.items);
        console.log(cartItems);
@@ -23,7 +24,9 @@ const Cart = () => {
             )}
            
           <ItemList items={cartItems}/>
-          
+
+          {/* <FoodCart/> */}
+        
       </div>
     </div>
     );
