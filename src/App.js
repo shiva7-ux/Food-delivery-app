@@ -74,3 +74,26 @@ const appRouter = createBrowserRouter([
 ]);
  const parent=ReactDOM.createRoot(document.getElementById("parent"));
  parent.render(<RouterProvider  router={appRouter}/> );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
